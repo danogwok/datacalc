@@ -1,0 +1,215 @@
+
+#HeaderContainer {
+height: 96px;
+width: 100%;
+position: relative;
+overflow: visible;
+background: url(../images/headerBG.png);
+background-repeat: repeat-x;
+}
+
+#BodyContainer {
+width: 1007px;
+position: relative;
+overflow: hidden;
+background-image:url("images/bodyBG.png") ;
+background-repeat: repeat;
+}
+
+#ProductFeatureBox {
+    background: url("../images/boxGradient.png") repeat-x scroll left bottom #F0F0F0;
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 10px;
+    padding: 4px;
+    width: 965px;
+}
+
+#ProductFeatureBox #Content {
+    background: url("../images/boxGradient.png") repeat-x scroll left bottom #F0F0F0;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    min-height: 355px;
+    padding: 8px 12px 12px;
+    height: 1100px;
+}
+
+#Content h3 {
+    padding-left: 20px;
+    font-style: italic;
+    font-size: 25px;
+}
+
+#main {
+	 background: none repeat scroll 0 0 #F0F0F0;
+    border-left: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    margin: 0 auto;
+    min-height: 420px;
+    overflow: hidden;
+    padding-bottom: 25px;
+    padding-top: 11px;
+    position: relative;
+    width: 980px;
+}
+
+.mainContainer {
+    width: 600px;
+    margin-left: 20px;
+    float: left;
+    
+     
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: url("images/ui-bg_glass_75_e6e6e6_1x400.png") repeat-x scroll 50% 50% #E6E6E6;
+    
+}
+.ui-widget-header {
+    background: #FFF;
+}
+.ui-widget-content {
+    background: url("images/ui-bg_glass_75_e6e6e6_1x400.png") repeat-x scroll 50% 50% #E6E6E6;
+}
+.Data_estimate {
+    width: 280px;
+    margin-top: 90px;
+      float: right;
+    height: 130px;
+    line-height: 1.3em;
+    padding: 10px;
+    background: url("../images/boxGradient.png") repeat-x scroll left bottom #F0F0F0;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.Data_estimate h3 {
+   color: #90CB41;
+   line-height: 1.3em; 
+   padding-left: 10px;
+}
+.info_container {
+    width: 280px;
+    margin-top: 20px;
+    float: right;
+    height: 330px;
+    line-height: 1.3em;
+    padding: 10px;
+    background: url("../images/boxGradient.png") repeat-x scroll left bottom #F0F0F0;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    /* position: fixed;
+    */
+}
+.option {
+    border-radius: 10px 10px 10px 10px;
+}
+
+.option h4 {
+    font-style: italic;
+}
+
+.amount h3{
+    font-size: 20px;
+    font-style: none;
+    color: #90CB41;
+    margin-bottom: 5px;
+}
+.amount p {
+    padding-left: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #90CB41;
+    font-style: italic;
+}
+/*
+input[type="text"] {
+    color: #90CB41;
+    border: 0; 
+    font-weight: bold;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    height: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 100px;
+    padding: 5px;
+}
+*/
+h3 {
+	font-size: 1.4em;
+    color: #86919A;
+    font-family: 'Arial';    
+	margin-bottom: 0.9em;
+}
+
+h4 {
+	font-size: 1.25em;
+    font-family: 'Arial'; 
+    color: #86919A;
+	margin-bottom: 0.25em;
+}
+form .option, form .sub>div {
+	border: 1px solid #bbb;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+form fieldset {
+	margin: 10px;
+}
+
+form fieldset p {
+	padding: 0.3em;
+}
+
+.sub {width: 200px;}
+.sub>div {background-color: #FCFFE5; margin-bottom: 20px;}
+.sub .total-price {background-color: #D6E5FF;}
+.option {background-color: #eee;}
+
+.bPrice .bPrice-price span {color: #a00;}
+
+.bPrice .total {font-size: 1.6em;}
+.bPrice .total span {color: #005DFF; font-weight: bold;}
+
+.bPrice.right .sub {margin-left: 20px;}
+.bPrice.left .sub {margin-right: 20px;}
+
+.bPrice textarea {display: block; height: 184px; width: 688px;}
+
+/*
+
+Don't edit below this line
+
+*/
+
+.bPrice {position: relative;}
+.bPrice .sub {position: absolute;}
+
+.bPrice.right .options {float: left;}
+.bPrice.left .options {float: right;}
+
+.total-price {
+    width: 280px;
+    margin-top: 20px;
+    left: 673px;
+    /*  float: right;
+      height: 330px;  */
+    line-height: 1.3em;
+    padding: 10px;
+    background: url("../images/boxGradient.png") repeat-x scroll left bottom #F0F0F0;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    position: fixed;
+}

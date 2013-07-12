@@ -1,0 +1,379 @@
+
+<!doctype html>
+ <html lang="en-us" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="Calc.css">
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="https://raw.github.com/mdp/gibberish-aes/master/src/gibberish-aes.js"></script>
+<link rel="stylesheet" href="js/jquery-ui.css">
+<link href="style.css"  rel="stylesheet" type="text/css" media="screen" />
+
+<style>#slider { margin: 10px; }  </style>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/sliders.js"></script>
+<title>Data Calculator</title>
+</head>
+
+<body>
+<div id="BodyContainer">
+<div id="HeaderContainer"> </div>
+<div id="main">
+<div id="ProductFeatureBox"> 
+<div id="Content">
+
+<div class="mainContainer">
+        <h3>Estimate your Monthly Usage.</h3>
+		<div class="htmltabs">
+<!--the tabs-->
+<div style="float: left; padding-right: 20px;"> <p>  <strong> Step 1: </strong> Select the Time Period</p> </div>
+<div class="tabs_container">
+    
+<ul class="tabs">
+    
+                <li class="tab1">
+                    <a class="tab1 tab" id='daily'>
+                        Daily   
+                    </a>
+                </li>
+                <li class="tab2">
+                    <a class="tab2 tab" id='weekly'>
+                        Weekly   
+                    </a>
+                </li>
+                <li class="tab3">
+                    <a class="tab3 tab" id='monthly'>
+                        Monthly 
+                    </a>
+                </li>
+                <li class="tab4">
+                    <a class="tab4">
+                        Usage tips
+                    </a>
+                </li>
+                </ul> 
+
+
+</div>
+               
+			<div class="tab1 tabsContent">
+                 <p>  <strong> Step 2: </strong> Adjust the Sliders Below to calculate your average Data Usage.</p>
+				<div><!-- daily content starts here-->
+					<form id="price-calculator-pro" action="#">
+
+<div class="option">
+<p><h4>Email Access</h4>
+	
+	<fieldset>		
+<img src="images/email_img.png">        
+<div id="sliderdailyemail" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="dailyemail" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="dailyemail">Emails</label>
+    
+</p>
+</fieldset>
+</p>
+
+</div>
+<div class="option">
+<h4>Browsing</h4>
+<fieldset>
+<img src="images/web_img.png">     
+<div id="sliderdailybrowsing" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="dailybrowsing" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;"  />
+    <label for="dailybrowsing">Mins</label>
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Streaming</h4>
+
+<fieldset>
+<img src="images/stream_img.png">     
+<div id="sliderdailystreaming" class="slider_width "></div>
+<p class="slider_Value">
+    <input type="text" id="dailystreaming" class="for_reset"  placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;"  />
+    <label for="dailystreaming" >Mins</label>
+</p>
+</fieldset>
+</div>
+
+<div class="option">
+<h4>Online Gaming</h4>
+
+<fieldset>
+<img src="images/game_img.png">     
+<div id="sliderdailygaming" class="slider_width "></div>
+<p class="slider_Value">
+    <input type="text" id="dailygaming" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;"  />
+    <label for="dailygaming">Mins</label>
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Video Conference</h4>
+<fieldset>
+<img src="images/video_img.png"> 
+<div id="sliderdailyvideo" class="slider_width "></div>
+<p class="slider_Value">
+     <input type="text" id="dailyvideo" class="for_reset" placeholder="0"  style="border: 0; color: #f6931f; font-weight: bold;"  />
+     <label for="dailygaming">Mins</label>
+</p>
+</fieldset>
+</div>
+
+</form>
+					<!--daily content ends here-->
+				</div>
+			</div>
+
+<div class="tab2 tabsContent">
+                <p>  <strong> Step 2: </strong> Adjust the Sliders Below to calculate your average Data Usage.</p>
+                <div> 
+                        <form id="price-calculator-pro" action="#">
+
+<div class="option">
+<p><h4>Email Access</h4>
+    
+    <fieldset>
+    <img src="images/email_img.png">        
+<div id="sliderweeklyemail" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="weeklyemail" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="weeklyemail">Emails</label>
+
+</p>
+</fieldset>
+</p>
+
+</div>
+<div class="option">
+<h4>Browsing</h4>
+<fieldset>
+<img src="images/web_img.png">
+<div id="sliderweeklybrowsing" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="weeklybrowsing" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="weeklybrowsing">Mins</label>
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Streaming</h4>
+
+
+
+<fieldset>
+    <img src="images/stream_img.png"> 
+<div id="sliderweeklystreaming" class="slider_width "></div>
+<p class="slider_Value">   
+    <input type="text" id="weeklystreaming" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="weeklystreaming">Mins</label>
+</p>
+</fieldset>
+</div>
+
+<div class="option">
+<h4>Online Gaming</h4>
+
+<fieldset>
+    <img src="images/game_img.png"> 
+<div id="sliderweeklygaming" class="slider_width "></div>
+<p class="slider_Value">
+    <input type="text" id="weeklygaming" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="weeklygaming">Mins</label>
+
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Video Conference</h4>
+<fieldset>
+    <img src="images/video_img.png"> 
+<div id="sliderweeklyvideo" class="slider_width "></div>
+<p class="slider_Value">  
+    <input type="text" id="weeklyvideo" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="weeklyvideo">Mins </label>
+</p>
+</fieldset>
+</div>
+
+
+</form>
+
+                    
+                </div> 
+                
+            </div>  
+            <!-- end of tab 2 -->
+            <!-- tab 3 -->
+            
+			 <div class="tab3 tabsContent">
+				<p>  <strong> Step 2: </strong> Adjust the Sliders Below to calculate your average Data Usage.</p>
+                <div> 
+						<form id="price-calculator-pro" action="#">
+
+<div class="option">
+<p><h4>Email Access</h4>
+	
+	<fieldset>
+    <img src="images/email_img.png">   		
+<div id="slidermonthlyemail" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="monthlyemail" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="monthlyemail">Emails</label>
+
+</p>
+</fieldset>
+</p>
+
+</div>
+<div class="option">
+<h4>Browsing</h4>
+<fieldset>
+<img src="images/web_img.png">
+<div id="slidermonthlybrowsing" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="monthlybrowsing" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="monthlybrowsing">Mins</label>
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Streaming</h4>
+
+
+
+<fieldset>
+    <img src="images/stream_img.png"> 
+<div id="slidermonthlystreaming" class="slider_width "></div>
+<p class="slider_Value">   
+    <input type="text" id="monthlystreaming" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="monthlystreaming">Mins</label>
+</p>
+</fieldset>
+</div>
+
+<div class="option">
+<h4>Online Gaming</h4>
+
+<fieldset>
+    <img src="images/game_img.png"> 
+<div id="slidermonthlygaming" class="slider_width "></div>
+<p class="slider_Value">
+    <input type="text" id="monthlygaming" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="monthlygaming">Mins</label>
+
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Video Conference</h4>
+<fieldset>
+    <img src="images/video_img.png"> 
+<div id="slidermonthlyvideo" class="slider_width "></div>
+<p class="slider_Value">  
+    <input type="text" id="monthlyvideo" class="for_reset" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="monthlyvideo">Mins </label>
+</p>
+</fieldset>
+</div>
+</div>
+</div>  
+            <!-- end of t3 -->
+
+<div class="tab4 tabsContent" style="height: 350px;">
+<div class="option tips">
+<h4>Usage Tips</h4>
+<fieldset>
+<p>*Opera Mini which mostly opens up the Mobile version of websites. Mobile versions of websites are small in size hence take up very little of the data bundle. This saves data for later use and prolongs your usage period.</p>
+</fieldset>
+<fieldset>
+<p>*Your computer may be infected with a virus. A virus will often send out mass emails from your computer without your knowledge.</p>
+</fieldset>
+<fieldset>
+<p>*Ensure that any software updates like windows updates are always disabled</p>
+</fieldset>
+<fieldset>
+<p>*Always ensure that you change your wireless password at least once a month or when you think it has been accessed by an unauthorized user</p>
+</fieldset>
+
+</div>
+</div>
+</form>
+
+					
+				
+				
+			
+			</div>
+
+<!-- float right -->
+
+<!-- end of float -->
+        
+		</div>
+        <!--
+                the right menus
+       -->
+       <div class="total-price" >
+            <div id="Suggested_bundle">
+               <h3> Adjust the Sliders</h3>
+               <div class="data_value">
+                <!-- <div id="yoursolutionbg"> -->
+                <div id="yoursolutionbg">
+                     <!--<span id="yoursolution"> Adjust the sliders to estimate </span>
+                        -->
+                        <div id="basic_text">
+                       <h4>Your estimated Monthly data usage is  <span id="monthlydata">0</span> GB and we recommend  <span id="yoursolution">No bundle</span></h4></div>
+                </div>
+                <div id="yoursolutionbg">
+                    <div id="basic_text">
+                        <h4>Your estimated <span id="tab_id">daily</span> data usage is  <span id="period_data">0</span> <span id="units">MB</span>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <!--
+            <div class="daily_bundle">
+                <div class="daily_text"> <h4>Your estimated daily data usage is</h4> </div>
+                <div class="bundle">  <p > <span id="dailydata">0</span></p> <p class="inner_text">GB</p> </div> 
+
+            </div>
+            <div class="daily_bundle">
+                <div class="daily_text"> <h4>Your estimated Monthly data usage is</h4> </div>
+                <div class="bundle">  <p > <span id="monthlydata">0</span> </p> <p class="inner_text">GB</p> </div> 
+
+            </div>
+        -->
+            <p> *All recommended prices are in UGX </p>
+            </div>
+            <div class="reset_button"> 
+                <input id="submit_btn" class="button" name="submit" type="button" value="Reset" />
+            </div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+</body>
+
+</html>
