@@ -280,7 +280,7 @@ var slidermonthlyvideo = $( "#slidermonthlyvideo" ).slider({
                 estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.0022737 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100;
                 estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.0022737 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) / 3000) / 100;
             
-            myFunction3(estimatedMonthly);
+            myFunction3();
             monthlyFunction3(estimatedMonthlyMBS);
             dailyFunction3(estimatedDailyfrommonthly);
             $("#monthvideo-cost").text(estimatedMonthlyVideo);
@@ -303,7 +303,7 @@ var slidermonthlyemail = $( "#slidermonthlyemail" ).slider({
                 estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100;
                 estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) /3000 ) / 100;
             
-            myFunction3(estimatedMonthly);
+            myFunction3();
             monthlyFunction3(estimatedMonthlyMBS);
             dailyFunction3(estimatedDailyfrommonthly);
             $("#monthemail-cost").text(estimatedMonthlyEmail);
@@ -326,7 +326,7 @@ var slidermonthlygaming = $( "#slidermonthlygaming" ).slider({
                 estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.001513 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlyvideo').slider("value") * 0.0022737) ) / 100;
                 estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.001513 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlyvideo').slider("value") * 0.0022737) / 3000) / 100;
             
-            myFunction3(estimatedMonthly);
+            myFunction3();
             monthlyFunction3(estimatedMonthlyMBS);
             dailyFunction3(estimatedDailyfrommonthly);
             $("#monthgaming-cost").text(estimatedMonthlyGaming);
@@ -349,7 +349,7 @@ var slidermonthlystreaming = $( "#slidermonthlystreaming" ).slider({
                 estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.0235243 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100;
                 estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.0235243 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlygaming').slider("value") * 0.001513) / 3000) / 100;
                 
-            myFunction3(estimatedMonthly);
+            myFunction3();
             monthlyFunction3(estimatedMonthlyMBS);
             dailyFunction3(estimatedDailyfrommonthly);
             $("#monthstreaming-cost").text(estimatedMonthlyStreaming);
@@ -372,7 +372,7 @@ var slidermonthlybrowsing = $( "#slidermonthlybrowsing" ).slider({
                 estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.0009357 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513)) / 100;
                 estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.0009357 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) / 3000) / 100;
             
-            myFunction3(estimatedMonthly);
+            myFunction3();
             monthlyFunction3(estimatedMonthlyMBS);
             dailyFunction3(estimatedDailyfrommonthly);
             $("#monthbrowsing-cost").text(estimatedMonthlyBrowsing);
@@ -539,67 +539,62 @@ function myFunction2(estimatedMonthly)
 //    $("#yoursolution").text("initial");
 }
 
-function myFunction3(estimatedMonthly)
+function myFunction3()
 {
     var response = 'no bundle';
-    var estimatedusage = estimatedMonthly;
+    var estimatedusage = estimatedMonthlyMBS;
     if (estimatedusage > 0){       
-        response= '500MB for 25,000UGX valid for 30 days and another on expiry.';
+        response= '500MB for 25,000';
     }
     if (estimatedusage > 612){       
-        response= '1GB for 45,000UGX valid for 30 days and another on expiry.';
+        response= '1GB for 45,000';
     }
     if (estimatedusage > 1519.8){       
-        response= '500MB for 25,000UGX valid for 30 days and another on expiry..';
+        response= '500MB for 25,000';
     }
     if (estimatedusage > 1530){       
-        response= '3GB for 85,000UGX valid for 30 days and another on expiry.';
+        response= '3GB for 85,000';
     }
 
     if (estimatedusage > 1632) {
-        response= '3GB for 85,000UGX valid for 30 days and another on expiry.';
+        response= '3GB for 85,000';
     }
     //Approximately 3gb
     if (estimatedusage > 2958) {
-        response= '3GB for 85,000UGX valid for 30 days and another on expiry.'; 
+        response= '3GB for 85,000'; 
     }
     if (estimatedusage > 3060) {
-        response= '10GB for 150,000UGX valid for 30 days and another on expiry.'; 
+        response= '10GB for 150,000'; 
     }
     if (estimatedusage > 6144) {
-        response= '10GB for 150,000UGX valid for 30 days and another on expiry.'; 
+        response= '10GB for 150,000'; 
     }
     //Approximately 10gb
     if (estimatedusage > 9200) {
-        response= '10GB for 150,000UGX valid for 30 days and another on expiry.'; 
+        response= '10GB for 150,000'; 
     }
     if (estimatedusage > 10200) {
-        response= '20GB for 250,000UGX valid for 30 days and another on expiry.'; 
+        response= '20GB for 250,000'; 
     }
     //Approximately 20gb
     if (estimatedusage > 19500) {
-        response= '20GB for 250,000UGX valid for 30 days and another on expiry.'; 
+        response= '20GB for 250,000'; 
     }
     if (estimatedusage > 20480) {
-        response= '20GB for 250,000UGX valid for 30 days and another on expiry.';
+        response= '20GB for 250,000';
     }
     if (estimatedusage > 40960) {
-        response= '50GB for 250,000UGX valid for 30 days and another on expiry.';
+        response= '50GB for 250,000';
     }
     //Approximately 50gb
     if (estimatedusage > 50000) {
-        response= '50GB for 530,000UGX valid for 30 days and another on expiry.';
+        response= '50GB for 530,000';
     }
     if (estimatedusage > 51200) {
-        response= '50GB for 530,000UGX valid for 30 days and another on expiry.';
+        response= '50GB for 530,000';
     }
-      /*
-    if (estimatedusage > 71680) {
-        response= 'We recommend 530,000 for 50GB Monthly and another bundle after.';
-    }
-    */
+    response += "UGX valid for 30 days and another on expiry.";
     $("#yoursolution").text(response);
-//    $("#yoursolution").text("initial");
 }
 
 
