@@ -2,89 +2,66 @@
 $(function() {
 
 
-var estimatedDaily=0, estimatedweekly=0, estimatedMonthly=0, estimatedMonthlyfromDaily, estimatedMonthlyMBS, estimatedDailyfromweekly, stimatedDailyfrommonthly;
+    var estimatedDaily=0, estimatedweekly=0, estimatedMonthly=0, estimatedMonthlyfromDaily, estimatedMonthlyMBS, estimatedDailyfromweekly, stimatedDailyfrommonthly;
 
-//daily data usage
-$( "#sliderdailyvideo" ).slider({
-	range: "max",
+    //daily data usage
+    $( "#sliderdailyvideo" ).slider({
+    	range: "max",
 		min: 0,
-		max: 100,
-		
+		max: 100,		
 		value: 0,
-		
 		slide: function( event, ui ) {
-                $( "#dailyvideo" ).val( ui.value );
-                var estimatedDailyVideo = Math.round(100 * (parseFloat(ui.value)  * 2.27)) / 100;
-                estimatedDaily = Math.round(100 * (ui.value * 2.27 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 102400;
-                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 2.27 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100;
+            $( "#dailyvideo" ).val( ui.value );
+            var estimatedDailyVideo = Math.round(100 * (parseFloat(ui.value)  * 2.27)) / 100;
+            estimatedDaily = Math.round(100 * (ui.value * 2.27 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 102400;
+            estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 2.27 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100;
 
             myFunction(estimatedMonthlyfromDaily);
             monthlyFunction(estimatedMonthlyfromDaily);
             dailyFunction(estimatedDaily);
-            $("#video-cost").text(estimatedDailyVideo);
-            $("#daily-cost").text(estimatedDaily);
             $("#period_data").text(estimatedDaily.toFixed(2));
-            $("#dailymonthly-cost").text(estimatedMonthlyfromDaily);
-    		//$("#daily-cost2").text(estimatedDailyVideo + $("#email-cost").text(estimatedDailyEmail) + $("#browsing-cost").text(estimatedDailyBrowsing) + $("#streaming-cost").text(estimatedDailyStreaming) + $("gaming-cost").text(estimatedDailyGaming));
-    		}     
-               
-	});
- //$( "#dailyvideo" ).val( $( "#sliderdailyvideo" ).slider( "value" ) );
-//});
-//return estimatedMonthlyfromDaily;
+        }                       
+    });
 
-$( "#sliderdailyemail" ).slider({
+
+    $( "#sliderdailyemail" ).slider({
 		range: "max",
 		min: 0,
-		max: 100,
-		
-		value: 0,
-		
+		max: 100,		
+		value: 0,		
 		slide: function( event, ui ) {
-                $("#dailyemail").val( ui.value );
-                var estimatedDailyEmail = Math.round(100 * (parseFloat(ui.value)  * 0.05)) / 100;
-                estimatedDaily = Math.round(100 * (ui.value * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 102400;
-                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100;
+            $("#dailyemail").val( ui.value );
+            var estimatedDailyEmail = Math.round(100 * (parseFloat(ui.value)  * 0.05)) / 100;
+            estimatedDaily = Math.round(100 * (ui.value * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 102400;
+            estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100;
 
             myFunction(estimatedMonthlyfromDaily);
             monthlyFunction(estimatedMonthlyfromDaily);
             dailyFunction(estimatedDaily);
-            $("#email-cost").text(estimatedDailyEmail);
-            $("#daily-cost").text(estimatedDaily);
             $("#period_data").text(estimatedDaily.toFixed(2));
-            $("#dailymonthly-cost").text(estimatedMonthlyfromDaily);
-
-    		//$("#daily-cost2").text(estimatedDailyEmail * 0.05 + $("#video-cost").text(estimatedDailyVideo) + $("#browsing-cost").text(estimatedDailyBrowsing) + $("#streaming-cost").text(estimatedDailyStreaming) + $("gaming-cost").text(estimatedDailyGaming));
-    		}        
+        }        
 	});
 
 
-
-$( "#sliderdailygaming" ).slider({
+    $( "#sliderdailygaming" ).slider({
 		range: "max",
 		min: 0,
-		max: 100,
-		
-		value: 0,
-		
+		max: 100,		
+		value: 0,		
 		slide: function( event, ui ) {
-                $( "#dailygaming" ).val( ui.value );
-                var estimatedDailyGaming = Math.round(100 * (parseFloat(ui.value)  * 1.51)) / 100;
-                estimatedDaily = Math.round(100 * (ui.value * 1.51 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailyvideo').slider("value") * 2.27) ) / 102400;
-                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 1.51 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailyvideo').slider("value") * 2.27) ) / 100;
+            $( "#dailygaming" ).val( ui.value );
+            var estimatedDailyGaming = Math.round(100 * (parseFloat(ui.value)  * 1.51)) / 100;
+            estimatedDaily = Math.round(100 * (ui.value * 1.51 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailyvideo').slider("value") * 2.27) ) / 102400;
+            estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 1.51 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailyvideo').slider("value") * 2.27) ) / 100;
 
             myFunction(estimatedMonthlyfromDaily);
             monthlyFunction(estimatedMonthlyfromDaily);
             dailyFunction(estimatedDaily);
-            $("#gaming-cost").text(estimatedDailyGaming);
-            $("#daily-cost").text(estimatedDaily);
             $("#period_data").text(estimatedDaily.toFixed(2));
-            $("#dailymonthly-cost").text(estimatedMonthlyfromDaily);
-    		//$("#daily-cost2").text(estimatedDailyGaming + $("#email-cost").text(estimatedDailyEmail) + $("#browsing-cost").text(estimatedDailyBrowsing) + $("#streaming-cost").text(estimatedDailyStreaming) + $("video-cost").text(estimatedDailyVideo));
-    		}        
+        }        
 	});
 
-$( "#sliderdailystreaming" ).slider({
+    $( "#sliderdailystreaming" ).slider({
 		range: "max",
 		min: 0,
 		max: 100,
@@ -108,7 +85,7 @@ $( "#sliderdailystreaming" ).slider({
     		}        
 	});
 
-$( "#sliderdailybrowsing" ).slider({
+    $( "#sliderdailybrowsing" ).slider({
 		range: "max",
 		min: 0,
 		max: 100,
@@ -131,8 +108,8 @@ $( "#sliderdailybrowsing" ).slider({
     		//$("#daily-cost2").text(estimatedDailyBrowsing + $("#email-cost").text(estimatedDailyEmail) + $("#browsing-cost").text(estimatedDailyBrowsing) + $("#streaming-cost").text(estimatedDailyStreaming) + $("video-cost").text(estimatedDailyVideo));
     		}        
 	});
-//weekly data usage
-$( "#sliderweeklyvideo" ).slider({
+    //weekly data usage
+    $( "#sliderweeklyvideo" ).slider({
     range: "max",
         min: 0,
         max: 700,
@@ -157,11 +134,9 @@ $( "#sliderweeklyvideo" ).slider({
             }     
                
     });
- //$( "#weeklyvideo" ).val( $( "#sliderweeklyvideo" ).slider( "value" ) );
-//});
-//return estimatedMonthlyfromweekly;
+ 
 
-$( "#sliderweeklyemail" ).slider({
+    $( "#sliderweeklyemail" ).slider({
         range: "max",
         min: 0,
         max: 700,
@@ -189,7 +164,7 @@ $( "#sliderweeklyemail" ).slider({
 
 
 
-$( "#sliderweeklygaming" ).slider({
+    $( "#sliderweeklygaming" ).slider({
         range: "max",
         min: 0,
         max: 700,
@@ -214,7 +189,7 @@ $( "#sliderweeklygaming" ).slider({
             }        
     });
 
-$( "#sliderweeklystreaming" ).slider({
+    $( "#sliderweeklystreaming" ).slider({
         range: "max",
         min: 0,
         max: 700,
